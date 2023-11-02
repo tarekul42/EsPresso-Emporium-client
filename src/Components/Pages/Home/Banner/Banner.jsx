@@ -1,5 +1,5 @@
 import CommonDescription from '../../../Shared/CommonDescription/CommonDescription';
-import CommonTitle1 from '../../../Shared/CommonTitle1/CommonTitle1';
+import CommonTitle1 from '../../../Shared/CommonTitles/CommonTitle1/CommonTitle1';
 import './Banner.css'
 
 const Banner = () => {
