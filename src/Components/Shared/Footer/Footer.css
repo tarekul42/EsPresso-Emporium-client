@@ -7,9 +7,18 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    border-color: #331A15;
 }
 .footer-send-message-button:hover{
     background-color: #331A15;
     color: white;
     border: 2px solid white;
+}
+.footer-navigation{
+    background: url('/public/images/more/24.jpg'), lightgray 50% / cover no-repeat;
+    color: #FFF;
+    font-family: 'Rancho', cursive;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
