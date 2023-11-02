@@ -1,0 +1,14 @@
+.navigationBar{
+    background: url('/public/images/more/15.jpg'), lightgray 50% / cover no-repeat;
+}
+/* .navigationImage{
+    background: url(/public/images/more/logo1.png), lightgray 50% / cover no-repeat;
+} */
+.navigationTitle{
+    color: #FFF;
+
+    font-family: Rancho;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
