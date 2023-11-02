@@ -1,3 +1,15 @@
 .footer-container{
     background: url('/public/images/more/13.jpg'), lightgray 50% / cover no-repeat;
 }
+.footer-send-message-button{
+    color: #331A15;
+    font-family: 'Rancho', cursive;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.footer-send-message-button:hover{
+    background-color: #331A15;
+    color: white;
+    border: 2px solid white;
+}

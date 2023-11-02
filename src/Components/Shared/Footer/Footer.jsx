@@ -15,9 +15,12 @@ const Footer = () => {
                 <div className='row-span-2 p-1 md:p-3 lg:p-4 xl:p-14'>
                     <CommonTitl2>Connect with Us</CommonTitl2>
                     <div>
-                        <input type="text" placeholder="Name" name='name' className="input w-full bg-white block" required/>
-                        <input type="email" placeholder="Email" name='email' className="input w-full bg-white my-2 lg:my-6" required/>
+                        <input type="text" placeholder="Name" name='name' className="input w-full bg-white block" required />
+                        <input type="email" placeholder="Email" name='email' className="input w-full bg-white my-2 lg:my-6" required />
                         <textarea className="textarea w-full bg-white textarea-lg" name='textarea' placeholder="Message" required></textarea>
+                        <button className="footer-send-message-button btn btn-outline border lg:border-2 rounded-3xl my-2 lg:my-6">
+                                <input type="submit" className='text-lg lg:text-2xl cursor-pointer' value="Send Message" />
+                        </button>
                     </div>
                 </div>
                 <div className='p-1 md:p-3 lg:p-4 xl:p-14'>
