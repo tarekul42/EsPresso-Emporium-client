@@ -9,21 +9,6 @@
 /* .banner-description-container{
 
 } */
-.common-title{
-    color: #FFF;
-    font-family: 'Rancho', cursive;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-.common-description{
-    color: #FFF;
-    font-family: 'Raleway', sans-serif;
-    font-style: normal;
-    font-weight: 100;
-    line-height: 30px;
-    line-height: 30px; /* 187.5% */
-}
 .banner-button{
     flex-shrink: 0;
     color: #242222;
