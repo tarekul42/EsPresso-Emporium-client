@@ -1,0 +1,40 @@
+.banner-container{
+    background: url('/public/images/more/3.png'), lightgray 50% / cover no-repeat;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    background-position-x: center;
+}
+/* .banner-description-container{
+
+} */
+.common-title{
+    color: #FFF;
+    font-family: 'Rancho', cursive;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.common-description{
+    color: #FFF;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    line-height: 30px;
+    line-height: 30px; /* 187.5% */
+}
+.banner-button{
+    flex-shrink: 0;
+    color: #242222;
+    font-family: 'Rancho', cursive;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background: #E3B577;
+}
+.banner-button:hover{
+    border: 2px solid #FFF;
+    color: #FFF;
+    background: none;
+}

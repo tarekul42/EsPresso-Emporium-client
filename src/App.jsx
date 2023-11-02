@@ -1,13 +1,13 @@
-import { Outlet } from 'react-router-dom'
 import './App.css'
-import Navigation from './Components/Shared/Header/Navigation/Navigation'
+import MainLayout from './Components/Layout/MainLayout'
+import Banner from './Components/Pages/Home/Banner/Banner'
 
 function App() {
 
   return (
     <>
-    <Navigation/>
-    <Outlet/>
+    <MainLayout/>
+    <Banner/>
     </>
   )
 }
