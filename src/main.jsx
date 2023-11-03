@@ -9,11 +9,13 @@ import './index.css'
 import MainLayout from './Components/Layout/MainLayout.jsx';
 import AddNewCoffee from './Components/Pages/AddNewCoffee/AddNewCoffee.jsx';
 import UpdateExistingCoffee from './Components/Pages/UpdateExistingCoffee/UpdateExistingCoffee.jsx';
+import ErrorPage from './Components/Pages/ErrorPage/ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout/>,
+    errorElement: <ErrorPage/>,
     children:[
       {
         path: '/',
@@ -26,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: 'updateExistingCoffee',
         element: <UpdateExistingCoffee/>
+      },
+      {
+        path: 'errorPage',
+        element: <ErrorPage/>
       }
     ]
   },
