@@ -1,0 +1,15 @@
+.add-new-coffee-button{
+    border-radius: 5px;
+    border: 2px solid #331A15;
+    width: 100%;
+    flex-shrink: 0;
+    color: #242222;
+    font-family: 'Rancho', cursive;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background: #E3B577;
+}
+.back-to-home:hover{
+    background: #E3B577;
+}

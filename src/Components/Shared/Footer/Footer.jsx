@@ -15,13 +15,13 @@ const Footer = () => {
                     </div>
                     <div className='row-span-2 p-1 md:p-3 lg:p-4 xl:p-14'>
                         <CommonTitl2>Connect with Us</CommonTitl2>
-                        <div>
+                        <form>
                             <input type="text" placeholder="Name" name='name' className="input w-full bg-white block" required />
                             <input type="email" placeholder="Email" name='email' className="input w-full bg-white my-2 lg:my-6" required />
                             <textarea className="textarea w-full bg-white textarea-lg mb-2 lg:mb-6" name='textarea' placeholder="Message" required></textarea>
                             <input type="submit" className='text-lg lg:text-2xl cursor-pointer rounded-3xl footer-send-message-button border lg:border-2 btn btn-outline w-36 lg:w-48 xl:w-56' value="Send Message" />
 
-                        </div>
+                        </form>
                     </div>
                     <div className='p-1 md:p-3 lg:p-4 xl:p-14'>
                         <div className='flex text-[#331A15] pb-2 md:pb-3 lg:pb-4'>

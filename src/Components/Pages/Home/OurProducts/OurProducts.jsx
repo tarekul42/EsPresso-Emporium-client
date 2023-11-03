@@ -14,7 +14,7 @@ const OurProducts = () => {
                 <div className="text-center">
                     <p className="about-products-description text-base">--- Sip & Savor ---</p>
                     <CommonTitle3>Our Popular Products</CommonTitle3>
-                    <Link>
+                    <Link to='/addNewCoffee'>
                         <button className="add-coffee-button text-base h-9 w-24 md:text-2xl md:h-12 md:w-32 inline-flex items-center justify-center gap-1">
                             Add Coffee <FaCoffee/>
                         </button>
