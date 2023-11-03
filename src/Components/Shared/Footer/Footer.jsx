@@ -19,7 +19,7 @@ const Footer = () => {
                             <input type="text" placeholder="Name" name='name' className="input w-full bg-white block" required />
                             <input type="email" placeholder="Email" name='email' className="input w-full bg-white my-2 lg:my-6" required />
                             <textarea className="textarea w-full bg-white textarea-lg mb-2 lg:mb-6" name='textarea' placeholder="Message" required></textarea>
-                            <input type="submit" className='text-lg lg:text-2xl cursor-pointer rounded-3xl footer-send-message-button border lg:border-2 btn btn-outline w-36 lg:w-48' value="Send Message" />
+                            <input type="submit" className='text-lg lg:text-2xl cursor-pointer rounded-3xl footer-send-message-button border lg:border-2 btn btn-outline w-36 lg:w-48 xl:w-56' value="Send Message" />
 
                         </div>
                     </div>
