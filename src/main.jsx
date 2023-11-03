@@ -8,6 +8,7 @@ import {
 import './index.css'
 import MainLayout from './Components/Layout/MainLayout.jsx';
 import AddNewCoffee from './Components/Pages/AddNewCoffee/AddNewCoffee.jsx';
+import UpdateExistingCoffee from './Components/Pages/UpdateExistingCoffee/UpdateExistingCoffee.jsx';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: 'addNewCoffee',
         element: <AddNewCoffee/>
+      },
+      {
+        path: 'updateExistingCoffee',
+        element: <UpdateExistingCoffee/>
       }
     ]
   },
