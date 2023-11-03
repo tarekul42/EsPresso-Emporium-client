@@ -1,0 +1,23 @@
+.our-products-container{
+    background: url('/public/images/more/1.png'), lightgray 50% / cover no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    background-position-x: center;
+}
+.add-coffee-button{
+    flex-shrink: 0;
+    color: #242222;
+    font-family: 'Rancho', cursive;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 5px;
+    border: 2px solid #331A15;
+    background: #E3B577;
+    text-shadow: 3px 1px 8px #331A15;
+}
+.add-coffee-button:hover{
+    color: #FFF;
+    background: none;
+}

@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import './index.css'
 import MainLayout from './Components/Layout/MainLayout.jsx';
+import AddNewCoffee from './Components/Pages/AddNewCoffee/AddNewCoffee.jsx';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <App/>
+      },
+      {
+        path: 'addNewCoffee',
+        element: <AddNewCoffee/>
       }
     ]
   },
