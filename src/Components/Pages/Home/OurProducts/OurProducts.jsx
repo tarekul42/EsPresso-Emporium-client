@@ -3,8 +3,10 @@ import CommonTitle3 from "../../../Shared/CommonTitles/CommonTitle3/CommonTitle3
 import './OurProducts.css'
 
 import { FaCoffee } from 'react-icons/fa';
+import CoffeeCard from "./CoffeeCard/CoffeeCard";
 
-const OurProducts = () => {
+const OurProducts = ({coffees, setCoffees}) => {
+
     return (
         <div className="bg-white py-6 md:py-16 lg:py-28">
             <div className="our-products-container bg-white">
@@ -23,7 +25,14 @@ const OurProducts = () => {
 
                 {/* body of the our products section */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-2 md:gap-2 lg:gap-4 py-14">
-                        this is second div
+                        {
+                            coffees.map(coffee => <CoffeeCard 
+                                key={coffee._id}
+                                coffee={coffee}
+                                coffees={coffees}
+                                setCoffees={setCoffees}
+                                ></CoffeeCard>)
+                        }
                 </div>
             </div>
             </div>
