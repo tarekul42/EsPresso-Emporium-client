@@ -29,10 +29,6 @@ const router = createBrowserRouter([
         path: 'updateExistingCoffee',
         element: <UpdateExistingCoffee/>
       },
-      {
-        path: 'errorPage',
-        element: <ErrorPage/>
-      }
     ]
   },
 ]);

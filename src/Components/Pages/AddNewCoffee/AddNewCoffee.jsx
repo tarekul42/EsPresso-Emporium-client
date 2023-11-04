@@ -4,6 +4,49 @@ import CommonTitl2 from '../../Shared/CommonTitles/CommonTitle2/CommonTitl2';
 import CommonTitle3 from '../../Shared/CommonTitles/CommonTitle3/CommonTitle3';
 import './AddNewCoffee.css'
 import { FaArrowLeft } from 'react-icons/fa';
+import Swal from 'sweetalert2'
+
+const handleAddNewCoffee = event =>{
+    event.preventDefault();
+        
+        const form = event.target;
+        const name = form.name.value;
+        const quantity = form.quantity.value;
+        const supplier = form.supplier.value;
+        const taste = form.taste.value;
+        const category = form.category.value;
+        const details = form.details.value;
+        const photo = form.photo.value;
+
+        const newCoffee = {name, quantity, supplier, taste, category, details, photo};
+        console.log(newCoffee);
+
+        // send data to server
+        fetch('http://localhost:5000/coffees', {
+            method: "POST",
+            headers: {
+                "content-type" : "application/json"
+            },
+            body: JSON.stringify(newCoffee)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Coffee added successfully',
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                  })
+                }
+                form.reset(); 
+        })
+        .catch((err) =>{
+            console.log(err);
+        })
+
+}
 
 const AddNewCoffee = () => {
     return (
@@ -21,7 +64,7 @@ const AddNewCoffee = () => {
                     {/* the body start form here */}
                     <div className='form-container bg-[#F4F3F0] rounded-md'>
 
-                        <form className='px-4 py-5 md:px-10 md:py-6 lg:px-20 lg:py-12 xl:px-32 xl:py-20'>
+                        <form onSubmit={handleAddNewCoffee} className='px-4 py-5 md:px-10 md:py-6 lg:px-20 lg:py-12 xl:px-32 xl:py-20'>
                             <div className='text-center py-1 md:px-14 md:py-2 lg:px-28 xl:px-40 lg:py-3 xl:py-5'>
                             <CommonTitle3 className="text-3xl font-extrabold mb-5">Add a Coffee</CommonTitle3>
                             <p className='about-products-description text-base'>It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
