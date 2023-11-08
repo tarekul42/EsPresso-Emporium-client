@@ -26,19 +26,19 @@ const UpdateExistingCoffee = () => {
                         <CommonTitle3 className="text-3xl font-extrabold mb-5">Update Existing Coffee Details</CommonTitle3>
                         <p className='about-products-description text-base'>It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
                         </div>
-                        {/* form name and quantity row */}
+                        {/* form name and Chef row */}
                         <div className="md:flex mb-4 gap-4">
                             <div className="form-control md:w-1/2">
                                 <label className="label">
                                     <CommonName className="label-text">Coffee Name</CommonName>
                                 </label>
-                                <input type="text" name="name" placeholder="Coffee Name" className="input input-bordered w-full bg-white" />
+                                <input type="text" name="name" placeholder="Enter Coffee Name" className="input input-bordered w-full bg-white" />
                             </div>
                             <div className="form-control md:w-1/2">
                                 <label className="label">
-                                    <CommonName className="label-text">Available Quantity</CommonName>
+                                    <CommonName className="label-text">Chef</CommonName>
                                 </label>
-                                <input type="text" name="quantity" placeholder="Available Quantity" className="input input-bordered w-full bg-white" />
+                                <input type="text" name="chef" placeholder="Enter Coffee Chef" className="input input-bordered w-full bg-white" />
                             </div>
                         </div>
                         {/* form supplier and taste row */}
@@ -47,13 +47,13 @@ const UpdateExistingCoffee = () => {
                                 <label className="label">
                                     <CommonName className="label-text">Supplier Name</CommonName>
                                 </label>
-                                <input type="text" name="supplier" placeholder="Supplier Name" className="input input-bordered w-full bg-white" />
+                                <input type="text" name="supplier" placeholder="Enter Coffee Supplier" className="input input-bordered w-full bg-white" />
                             </div>
                             <div className="form-control md:w-1/2">
                                 <label className="label">
                                     <CommonName className="label-text">Taste</CommonName>
                                 </label>
-                                <input type="text" name="taste" placeholder="Taste" className="input input-bordered w-full bg-white" />
+                                <input type="text" name="taste" placeholder="Enter Coffee Taste" className="input input-bordered w-full bg-white" />
                             </div>
                         </div>
                         {/* form category and details row */}
@@ -62,13 +62,13 @@ const UpdateExistingCoffee = () => {
                                 <label className="label">
                                     <CommonName className="label-text">Category</CommonName>
                                 </label>
-                                <input type="text" name="category" placeholder="Category" className="input input-bordered w-full bg-white" />
+                                <input type="text" name="category" placeholder="Enter Coffee Category" className="input input-bordered w-full bg-white" />
                             </div>
                             <div className="form-control md:w-1/2">
                                 <label className="label">
                                     <CommonName className="label-text">Details</CommonName>
                                 </label>
-                                <input type="text" name="details" placeholder="Details" className="input input-bordered w-full bg-white" />
+                                <input type="text" name="details" placeholder="Enter Coffee Details" className="input input-bordered w-full bg-white" />
                             </div>
                         </div>
                         {/* form photo url row */}
@@ -77,7 +77,7 @@ const UpdateExistingCoffee = () => {
                                 <label className="label">
                                     <CommonName className="label-text">Photo URL</CommonName>
                                 </label>
-                                <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered w-full bg-white" />
+                                <input type="text" name="photo" placeholder="Enter Photo URL" className="input input-bordered w-full bg-white" />
                             </div>
                         </div>
                         {/* submit button here */}

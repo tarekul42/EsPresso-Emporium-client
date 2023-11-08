@@ -24,7 +24,7 @@ const OurProducts = ({coffees, setCoffees}) => {
                 </div>
 
                 {/* body of the our products section */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-2 md:gap-2 lg:gap-4 py-14">
+                <div className="grid grid-cols-1 xl:grid-cols-2 items-center gap-2 md:gap-2 xl:gap-4 py-14">
                         {
                             coffees.map(coffee => <CoffeeCard 
                                 key={coffee._id}
