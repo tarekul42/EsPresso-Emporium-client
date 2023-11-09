@@ -11,7 +11,7 @@ const handleAddNewCoffee = event =>{
         
         const form = event.target;
         const name = form.name.value;
-        const chef = form.Chef.value;
+        const chef = form.chef.value;
         const supplier = form.supplier.value;
         const taste = form.taste.value;
         const category = form.category.value;
@@ -81,7 +81,7 @@ const AddNewCoffee = () => {
                                     <label className="label">
                                         <CommonName className="label-text">Chef</CommonName>
                                     </label>
-                                    <input type="text" name="Chef" placeholder="Enter Coffee Chef" className="input input-bordered w-full bg-white" />
+                                    <input type="text" name="chef" placeholder="Enter Coffee Chef" className="input input-bordered w-full bg-white" />
                                 </div>
                             </div>
                             {/* form supplier and taste row */}

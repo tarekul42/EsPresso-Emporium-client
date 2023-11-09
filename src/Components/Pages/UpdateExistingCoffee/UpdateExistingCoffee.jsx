@@ -4,15 +4,50 @@ import CommonTitl2 from '../../Shared/CommonTitles/CommonTitle2/CommonTitl2';
 import './UpdateExistingCoffee.css'
 import { Link, useLoaderData } from 'react-router-dom';
 import CommonTitle3 from '../../Shared/CommonTitles/CommonTitle3/CommonTitle3';
+import Swal from 'sweetalert2';
 
 const UpdateExistingCoffee = () => {
 
     const loadedCoffee = useLoaderData();
-    const { name, chef, supplier, taste, category, details, photo } = loadedCoffee;
-    console.log(loadedCoffee);
+    const { _id, name, chef, supplier, taste, category, details, photo } = loadedCoffee;
 
     const handleUpdateCoffee = event =>{
-        event.preventDefault();
+        event.preventDefault()
+            
+        const form = event.target;
+        const name = form.name.value;
+        const chef = form.chef.value;
+        const supplier = form.supplier.value;
+        const taste = form.taste.value;
+        const category = form.category.value;
+        const details = form.details.value;
+        const photo = form.photo.value;
+
+        const updatedCoffee = {name, chef, supplier, taste, category, details, photo};
+
+        // send data to server
+        fetch(`http://localhost:5000/coffees/${_id}`, {
+            method: "PUT",
+            headers: {
+                "content-type" : "application/json"
+            },
+            body: JSON.stringify(updatedCoffee)
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data.modifiedCount > 0){
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Coffee updated successfully',
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                  })
+                }
+                form.reset(); 
+        })
+        .catch((err) =>{
+            console.log(err);
+        })
     }
 
     return (
