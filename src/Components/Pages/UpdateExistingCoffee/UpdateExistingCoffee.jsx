@@ -2,10 +2,19 @@ import { FaArrowLeft } from 'react-icons/fa';
 import CommonName from '../../Shared/CommonName/CommonName';
 import CommonTitl2 from '../../Shared/CommonTitles/CommonTitle2/CommonTitl2';
 import './UpdateExistingCoffee.css'
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import CommonTitle3 from '../../Shared/CommonTitles/CommonTitle3/CommonTitle3';
 
 const UpdateExistingCoffee = () => {
+
+    const loadedCoffee = useLoaderData();
+    const { name, chef, supplier, taste, category, details, photo } = loadedCoffee;
+    console.log(loadedCoffee);
+
+    const handleUpdateCoffee = event =>{
+        event.preventDefault();
+    }
+
     return (
         <div className="bg-[#FFF] py-7 xl:p-20">
         <div className='min-h-min w-11/12 md:w-5/6 mx-auto'>
@@ -21,7 +30,7 @@ const UpdateExistingCoffee = () => {
                 {/* the body start form here */}
                 <div className='form-container bg-[#F4F3F0] rounded-md'>
 
-                    <form className='px-4 py-5 md:px-10 md:py-6 lg:px-20 lg:py-12 xl:px-32 xl:py-20'>
+                    <form onSubmit={handleUpdateCoffee} className='px-4 py-5 md:px-10 md:py-6 lg:px-20 lg:py-12 xl:px-32 xl:py-20'>
                         <div className='text-center py-1 md:px-14 md:py-2 lg:px-28 xl:px-40 lg:py-3 xl:py-5'>
                         <CommonTitle3 className="text-3xl font-extrabold mb-5">Update Existing Coffee Details</CommonTitle3>
                         <p className='about-products-description text-base'>It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
@@ -32,13 +41,13 @@ const UpdateExistingCoffee = () => {
                                 <label className="label">
                                     <CommonName className="label-text">Coffee Name</CommonName>
                                 </label>
-                                <input type="text" name="name" placeholder="Enter Coffee Name" className="input input-bordered w-full bg-white" />
+                                <input type="text" name="name" defaultValue={name} placeholder="Enter Coffee Name" className="input input-bordered w-full bg-white" />
                             </div>
                             <div className="form-control md:w-1/2">
                                 <label className="label">
                                     <CommonName className="label-text">Chef</CommonName>
                                 </label>
-                                <input type="text" name="chef" placeholder="Enter Coffee Chef" className="input input-bordered w-full bg-white" />
+                                <input type="text" name="chef" defaultValue={chef} placeholder="Enter Coffee Chef" className="input input-bordered w-full bg-white" />
                             </div>
                         </div>
                         {/* form supplier and taste row */}
@@ -47,13 +56,13 @@ const UpdateExistingCoffee = () => {
                                 <label className="label">
                                     <CommonName className="label-text">Supplier Name</CommonName>
                                 </label>
-                                <input type="text" name="supplier" placeholder="Enter Coffee Supplier" className="input input-bordered w-full bg-white" />
+                                <input type="text" name="supplier" defaultValue={supplier} placeholder="Enter Coffee Supplier" className="input input-bordered w-full bg-white" />
                             </div>
                             <div className="form-control md:w-1/2">
                                 <label className="label">
                                     <CommonName className="label-text">Taste</CommonName>
                                 </label>
-                                <input type="text" name="taste" placeholder="Enter Coffee Taste" className="input input-bordered w-full bg-white" />
+                                <input type="text" name="taste" defaultValue={taste} placeholder="Enter Coffee Taste" className="input input-bordered w-full bg-white" />
                             </div>
                         </div>
                         {/* form category and details row */}
@@ -62,13 +71,13 @@ const UpdateExistingCoffee = () => {
                                 <label className="label">
                                     <CommonName className="label-text">Category</CommonName>
                                 </label>
-                                <input type="text" name="category" placeholder="Enter Coffee Category" className="input input-bordered w-full bg-white" />
+                                <input type="text" name="category" defaultValue={category} placeholder="Enter Coffee Category" className="input input-bordered w-full bg-white" />
                             </div>
                             <div className="form-control md:w-1/2">
                                 <label className="label">
                                     <CommonName className="label-text">Details</CommonName>
                                 </label>
-                                <input type="text" name="details" placeholder="Enter Coffee Details" className="input input-bordered w-full bg-white" />
+                                <input type="text" name="details" defaultValue={details} placeholder="Enter Coffee Details" className="input input-bordered w-full bg-white" />
                             </div>
                         </div>
                         {/* form photo url row */}
@@ -77,7 +86,7 @@ const UpdateExistingCoffee = () => {
                                 <label className="label">
                                     <CommonName className="label-text">Photo URL</CommonName>
                                 </label>
-                                <input type="text" name="photo" placeholder="Enter Photo URL" className="input input-bordered w-full bg-white" />
+                                <input type="text" name="photo" defaultValue={photo} placeholder="Enter Photo URL" className="input input-bordered w-full bg-white" />
                             </div>
                         </div>
                         {/* submit button here */}

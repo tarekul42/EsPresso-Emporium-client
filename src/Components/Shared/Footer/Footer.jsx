@@ -9,7 +9,7 @@ const Footer = () => {
             <div className='footer-container'>
                 <div className='grid md:grid-cols-2 md:grid-rows-2 items-center w-11/12 md:w-5/6 mx-auto gap-y-5 2xl:gap-x-32 pt-5'>
                     <div className='p-1 md:p-3 lg:p-4 xl:p-14'>
-                        <img className='pb-4 h-14 md:h-20' src="./public/images/more/logo1.png" alt="Espresso Emporium logo" />
+                        <img className='pb-4 h-14 md:h-20' src="https://i.ibb.co/0jNmN0p/logo1.png" alt="Espresso Emporium logo" />
                         <CommonTitl2>Espresso Emporium</CommonTitl2>
                         <p className='about-products-description text-base'>Always ready to be your friend. Come & Contact with us to share your memorable moments, to share with your best companion.</p>
                     </div>

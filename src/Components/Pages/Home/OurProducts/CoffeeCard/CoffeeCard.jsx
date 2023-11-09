@@ -23,13 +23,14 @@ const CoffeeCard = ({ coffee }) => {
                 </div>
                 <div className='flex flex-row md:flex-col justify-around gap-4 border-2'>
                     <Link to={`viewCoffeeDetails/${_id}`}>
-
-                    <EyeIcon className='h-10 w-10 bg-[#D2B48C] text-white p-2 rounded-md cursor-pointer' />
+                        <EyeIcon className='h-10 w-10 bg-[#D2B48C] text-white p-2 rounded-md cursor-pointer' />
                     </Link>
-                    <PencilIcon className='h-10 w-10 bg-[#3C393B] text-white p-2 rounded-md cursor-pointer' />
+                    <Link to={`updateExistingCoffee/${_id}`}>
+                        <PencilIcon className='h-10 w-10 bg-[#3C393B] text-white p-2 rounded-md cursor-pointer' />
+                    </Link>
                     <FaTrashAlt className='h-10 w-10 bg-[#EA4744] text-white p-2 rounded-md cursor-pointer' />
                 </div>
-                </div>
+            </div>
             {/* </div> */}
         </>
     );
