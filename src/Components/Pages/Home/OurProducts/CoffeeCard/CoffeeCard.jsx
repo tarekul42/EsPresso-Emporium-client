@@ -11,17 +11,17 @@ const CoffeeCard = ({ coffee }) => {
 
     return (
         <>
-            <div className="coffee-card-container flex flex-col md:flex-row w-full items-center justify-between md:p-8">
-                <div className='border-2'><img className='h-30 lg:h-60 w-40 lg:w-80' src={photo} alt="" /></div>
+            <div className="coffee-card-container flex flex-col xl:flex-row h-full xl:h-auto w-full items-start md:items-center justify-between gap-4 xl:gap-0 pb-4 md:p-8">
+                <div><img className='h-30 lg:h-60 w-40 lg:w-64' src={photo} alt="" /></div>
                 {/* <div className='flex flex-col md:flex-row '> */}
-                <div className='border-2'>
+                <div className='w-full px-2 md:px-0'>
                     <div >
                         <div><span className='inline-block float-left'><CommonName>Name : </CommonName></span> <p className=' about-products-description text-lg lg:text-xl 2xl:text-2xl'>{name}</p> </div>
                         <div><span className='inline-block float-left'><CommonName>Chef : </CommonName></span> <p className='about-products-description text-lg lg:text-xl 2xl:text-2xl'>{chef}</p> </div>
                         <div><span className='inline-block float-left'><CommonName>Category : </CommonName></span> <p className='about-products-description text-lg lg:text-lg 2xl:text-2xl'>{category}</p> </div>
                     </div>
                 </div>
-                <div className='flex flex-row md:flex-col justify-around gap-4 border-2'>
+                <div className='w-full xl:w-auto flex flex-row lg:flex-row xl:flex-col justify-around gap-4'>
                     <Link to={`viewCoffeeDetails/${_id}`}>
                         <EyeIcon className='h-10 w-10 bg-[#D2B48C] text-white p-2 rounded-md cursor-pointer' />
                     </Link>
