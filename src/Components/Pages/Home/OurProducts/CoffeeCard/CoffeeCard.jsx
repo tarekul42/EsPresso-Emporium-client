@@ -3,11 +3,44 @@ import { EyeIcon, PencilIcon } from '@heroicons/react/24/solid'
 import { FaTrashAlt } from "react-icons/fa";
 import CommonName from '../../../../Shared/CommonName/CommonName';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 
-const CoffeeCard = ({ coffee }) => {
+const CoffeeCard = ({ coffee, coffees, setCoffees }) => {
 
     const { _id, name, chef, category, photo } = coffee;
+
+    const handleDeleteCoffee = (id) =>{
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                fetch(`http://localhost:5000/coffees/${id}`, {
+                    method: "DELETE"
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.deletedCount > 0) {
+                            Swal.fire(
+                                'Deleted!',
+                                'Your Coffee has been deleted.',
+                                'success'
+                            )
+                            const remaining = coffees.filter(coffee => coffee._id !== _id);
+                            setCoffees(remaining);
+                        }
+                    })
+
+                }
+            })
+    }
 
     return (
         <>
@@ -28,7 +61,10 @@ const CoffeeCard = ({ coffee }) => {
                     <Link to={`updateExistingCoffee/${_id}`}>
                         <PencilIcon className='h-10 w-10 bg-[#3C393B] text-white p-2 rounded-md cursor-pointer' />
                     </Link>
-                    <FaTrashAlt className='h-10 w-10 bg-[#EA4744] text-white p-2 rounded-md cursor-pointer' />
+                    <div title='This button in disabled for few times.' className='cursor-not-allowed'>
+
+                    <FaTrashAlt onClick={() => handleDeleteCoffee(_id)} className='h-10 w-10 bg-[#EA4744] text-white p-2 rounded-md btn-disabled' />
+                    </div>
                 </div>
             </div>
             {/* </div> */}

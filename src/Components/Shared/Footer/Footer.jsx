@@ -2,8 +2,17 @@ import { Link } from 'react-router-dom';
 import CommonTitl2 from '../CommonTitles/CommonTitle2/CommonTitl2';
 import './Footer.css';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaPhoneAlt } from 'react-icons/fa';
+import { useState } from 'react';
 
 const Footer = () => {
+
+    const [ error, setError ] = useState('');
+
+    const handleConnectUsBtn = event =>{
+        event.preventDefault();
+        setError("You can't send message for some technical issue.")
+    }
+
     return (
         <>
             <div className='footer-container'>
@@ -15,11 +24,15 @@ const Footer = () => {
                     </div>
                     <div className='row-span-2 p-1 md:p-3 lg:p-4 xl:p-14'>
                         <CommonTitl2>Connect with Us</CommonTitl2>
-                        <form>
+                        <form onSubmit={handleConnectUsBtn}>
                             <input type="text" placeholder="Name" name='name' className="input w-full bg-white block" required />
                             <input type="email" placeholder="Email" name='email' className="input w-full bg-white my-2 lg:my-6" required />
                             <textarea className="textarea w-full bg-white textarea-lg mb-2 lg:mb-6" name='textarea' placeholder="Message" required></textarea>
-                            <input type="submit" className='text-lg lg:text-2xl cursor-pointer rounded-3xl footer-send-message-button border lg:border-2 btn btn-outline w-36 lg:w-48 xl:w-56' value="Send Message" />
+                            {
+                                error.length > 0 &&
+                                <p className='about-products-description text-xs md:text-sm lg:text-base pb-2 lg:pb-3'>{error}</p>
+                            }
+                            <input type="submit" className='text-lg lg:text-2xl rounded-3xl footer-send-message-button border lg:border-2 btn btn-outline cursor-not-allowed w-36 lg:w-48 xl:w-56' value="Send Message" />
 
                         </form>
                     </div>
